@@ -11,6 +11,15 @@
 1. Visit [https://docs.docker.com/toolbox/toolbox_install_windows](https://docs.docker.com/toolbox/toolbox_install_windows) instead to download and install Docker Toolbox.
 2. Ensure that you've verified your docker toolbox installation in step 3 on that page. The Docker CLI should be installed and accessible via Git Bash, and all console/terminal commands should be run Git Bash.
 
+### Installation for Windows 10 Home Edition: Enabling Shared Volumes
+1. Ensure that you've opened the Docker Quick Start Terminal before this.
+2. Click on Start and run `Oracle VM VirtualBox`.
+3. Select the `default` machine and click on `Settings`, then select `Shared Folders`. To mount folders in our docker containers later, we will have to first explicitly share folders with the docker machine here.
+4. Click on the green + at the right to share a folder. Choose a folder for `Folder Path` in which you will create all your projects in, and give it a convenient name in lower case under `Folder Name`. For convenience in mounting volumes later, choose the drive that you will be creating your projects in for the `Folder Path` and give it a corresponding `Folder Name`, e.g. if your Windows user folder is in `D:`, then select `D:` as your `Folder Path` to share, and give it the name `d`. 
+5. If you are planning to install and use docker from the Windows Subsystem for Linux later, you should also add your Windows user folder, e.g. `D:\Users\Tan Ah Teck`, and give it the name of your WSL home folder `/home/tanahteck`.
+5. Ensure that `Auto-mount` and `Make Permanent` are both checked, then click on `ok`. You can now close `VirtualBox`.
+6. In the Docker Quick Start Terminal, run `docker-machine restart` for the shared folder settings to take effect.
+
 ### (Optional for Windows 10 Users) Installing Docker in Windows Subsystem for Linux (WSL)
 
 Check [wsl-docker.md](wsl-docker.md).

@@ -126,6 +126,8 @@
 
 **Steps** :
 
+__Windows 10 Home Users: You may have to replace ``` `pwd` ``` in the code below with ``` `pwd.ToLower()` ```, assuming you had followed the folder naming advice.__
+
 1. Start the container again with this new command:
 
 	```
